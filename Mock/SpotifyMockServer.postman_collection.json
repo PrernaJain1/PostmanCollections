@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "7fed532f-afc6-48a3-af3d-03a116935ec0",
+		"name": "SpotifyMockServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34495103"
+	},
+	"item": [
+		{
+			"name": "getUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/v1/me",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"me"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/v1/me",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"me"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "\"Successful\""
+				}
+			]
+		},
+		{
+			"name": "CreatePlaylist",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Prerna Playlist5\",\r\n    \"description\": \"Playlist contains english songs\",\r\n    \"public\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://f9ca9da7-fdc9-4ef6-9b93-808414126b10.mock.pstmn.io/v1/users/{{user_id}}/playlists",
+					"protocol": "https",
+					"host": [
+						"f9ca9da7-fdc9-4ef6-9b93-808414126b10",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"v1",
+						"users",
+						"{{user_id}}",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://30d526ff-ee82-43f9-ae00-05e1e3a571c8.mock.pstmn.io"
+		}
+	]
+}

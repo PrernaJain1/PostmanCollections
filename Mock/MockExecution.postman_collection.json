@@ -1,0 +1,32 @@
+{
+	"info": {
+		"_postman_id": "4bc62233-4d7e-4903-9e23-4779f4341fdf",
+		"name": "MockExecution",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34495103"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://30d526ff-ee82-43f9-ae00-05e1e3a571c8.mock.pstmn.io/v1/me",
+					"protocol": "https",
+					"host": [
+						"30d526ff-ee82-43f9-ae00-05e1e3a571c8",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"v1",
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "57e4ccca-209b-47b2-9f90-948aeba04b85",
+		"name": "CreatePlaylist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34495103"
+	},
+	"item": [
+		{
+			"name": "v1/users/{{user_id}}/playlists",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Prerna Playlist1\",\r\n    \"description\": \"Playlist contains english songs\",\r\n    \"public\": true\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/v1/users/{{user_id}}/playlists",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"users",
+						"{{user_id}}",
+						"playlists"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/v1/users/{{user_id}}/playlists",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"{{user_id}}",
+								"playlists"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "\"Created\""
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://c262eb54-02cb-431d-8275-13b829536f1f.mock.pstmn.io"
+		}
+	]
+}

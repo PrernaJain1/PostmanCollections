@@ -1,0 +1,526 @@
+{
+	"info": {
+		"_postman_id": "04bb56e6-ab77-4dc4-a34d-dd07be9bc4c0",
+		"name": "Spotify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34495103"
+	},
+	"item": [
+		{
+			"name": "CreatePlaylist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{btoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Prerna Playlist1\",\r\n    \"description\": \"Playlist contains english songs\",\r\n    \"public\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/users/{{USER_ID}}/playlists",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"users",
+						"{{USER_ID}}",
+						"playlists"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CreatePlaylist",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Prerna Playlist1\",\r\n    \"description\": \"Playlist contains english songs\",\r\n    \"public\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://c262eb54-02cb-431d-8275-13b829536f1f.mock.pstmn.io/v1/users/{{USER_ID}}/playlists",
+							"protocol": "https",
+							"host": [
+								"c262eb54-02cb-431d-8275-13b829536f1f",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"v1",
+								"users",
+								"{{USER_ID}}",
+								"playlists"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "cache-control",
+							"value": "private, max-age=0"
+						},
+						{
+							"key": "x-robots-tag",
+							"value": "noindex, nofollow"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "access-control-allow-headers",
+							"value": "Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token"
+						},
+						{
+							"key": "access-control-allow-methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE, PATCH"
+						},
+						{
+							"key": "access-control-allow-credentials",
+							"value": "true"
+						},
+						{
+							"key": "access-control-max-age",
+							"value": "604800"
+						},
+						{
+							"key": "content-encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "strict-transport-security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "date",
+							"value": "Wed, 11 Dec 2024 10:42:37 GMT"
+						},
+						{
+							"key": "server",
+							"value": "envoy"
+						},
+						{
+							"key": "Via",
+							"value": "HTTP/2 edgeproxy, 1.1 google"
+						},
+						{
+							"key": "Alt-Svc",
+							"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"collaborative\": false,\n    \"description\": \"Playlist contains english songs\",\n    \"external_urls\": {\n        \"spotify\": \"https://open.spotify.com/playlist/6WiRzeyPbqGCrqCOrudOwV\"\n    },\n    \"followers\": {\n        \"href\": null,\n        \"total\": 0\n    },\n    \"href\": \"https://api.spotify.com/v1/playlists/6WiRzeyPbqGCrqCOrudOwV\",\n    \"id\": \"6WiRzeyPbqGCrqCOrudOwV\",\n    \"images\": [],\n    \"primary_color\": null,\n    \"name\": \"Prerna Playlist1\",\n    \"type\": \"playlist\",\n    \"uri\": \"spotify:playlist:6WiRzeyPbqGCrqCOrudOwV\",\n    \"owner\": {\n        \"href\": \"https://api.spotify.com/v1/users/31xpvwawac2pjazddlq5l3m3nm2e\",\n        \"id\": \"31xpvwawac2pjazddlq5l3m3nm2e\",\n        \"type\": \"user\",\n        \"uri\": \"spotify:user:31xpvwawac2pjazddlq5l3m3nm2e\",\n        \"display_name\": null,\n        \"external_urls\": {\n            \"spotify\": \"https://open.spotify.com/user/31xpvwawac2pjazddlq5l3m3nm2e\"\n        }\n    },\n    \"public\": true,\n    \"snapshot_id\": \"AAAAC0QotIF2kXFvo0ZI6MpCUONDyoDQ\",\n    \"tracks\": {\n        \"limit\": 100,\n        \"next\": null,\n        \"offset\": 0,\n        \"previous\": null,\n        \"href\": \"https://api.spotify.com/v1/playlists/6WiRzeyPbqGCrqCOrudOwV/tracks\",\n        \"total\": 0,\n        \"items\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"console.log(jsonData.id)\r",
+							"\r",
+							"pm.collectionVariables.set(\"USER_ID\", jsonData.id);\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{btoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {access_token}"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/me",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"https://api.spotify.com/v1/me\" -H \"Authorization: Bearer {access_token}\"\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "getPlaylist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{btoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/playlists/{{playlist_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"playlists",
+						"{{playlist_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAlbum",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{btoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/albums/{{album_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"albums",
+						"{{album_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAlbumTracks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{btoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/albums/{{album_id}}/tracks",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"albums",
+						"{{album_id}}",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getNewReleases",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{btoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/browse/new-releases",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"browse",
+						"new-releases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{btoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/users/{{user_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"users",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkIfCurrentUserFollowsPlaylist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{btoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/playlists/{{playlist_id}}/followers/contains",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"playlists",
+						"{{playlist_id}}",
+						"followers",
+						"contains"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "clientSecret",
+				"value": "{{client_secret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{client_id}}",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "playlist-modify-public playlist-read-private playlist-modify-private",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://accounts.spotify.com/authorize",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://accounts.spotify.com/api/token",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "https://localhost:1100/",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "Spotify",
+				"type": "string"
+			},
+			{
+				"key": "refreshRequestParams",
+				"value": [],
+				"type": "any"
+			},
+			{
+				"key": "tokenRequestParams",
+				"value": [],
+				"type": "any"
+			},
+			{
+				"key": "authRequestParams",
+				"value": [],
+				"type": "any"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "client_id",
+			"value": "2c99155fb47e4f10bd892426b3e95575",
+			"type": "string"
+		},
+		{
+			"key": "client_secret",
+			"value": "8ea00acad86d4e3aaa923b8a6af19410",
+			"type": "string"
+		},
+		{
+			"key": "USER_ID",
+			"value": ""
+		}
+	]
+}
